@@ -1,19 +1,20 @@
 <html>
   <head>
-    <title>hCaptcha</title>
-    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <title>reCAPTCHA</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body style='background-color: aqua;'>
     <div style='height: 60px;'></div>
     <form action="?" method="POST">
-      <div class="h-captcha" 
-        data-sitekey="f8e39ba4-02d7-4319-8e94-238829dd23ac"
+      <div class="g-recaptcha" 
+        data-sitekey="6Le-VlgaAAAAADWNET-rWQGSVeB8i68arWk1kJ5n"
         data-callback="captchaCallback"></div>
 
     </form>
     <script>
-      function captchaCallback(response) {
-        if (typeof Captcha!=="undefined") {
+      function captchaCallback(response){
+        //console.log(response);
+        if(typeof Captcha!=="undefined"){
           Captcha.postMessage(response);
         }
       }
