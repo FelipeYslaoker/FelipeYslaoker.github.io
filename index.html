@@ -3,13 +3,13 @@
     <title>reCAPTCHA</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
-  <body style='background: transparent; margin: 0; padding: 0;'>
+  <body style='background: transparent; margin: 0; padding: 0; overflow: hidden;'>
     <form action="?" method="POST">
       <div class="g-recaptcha" 
         data-sitekey="6Le-VlgaAAAAADWNET-rWQGSVeB8i68arWk1kJ5n"
         data-callback="captchaCallback"></div>
 
-    </form>
+    </form style='margin-block-end: 0;'>
     <script>
       function captchaCallback(response){
         //console.log(response);
